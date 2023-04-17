@@ -1,2 +1,0 @@
-flux create helmrelease my-redis-release --namespace=flux-redis --target-namespace=flux-redis --interval=5m --source=HelmRepository/redis-repository --chart=redis --chart-version=>17.9.2 --export > ./redis.yaml
-
