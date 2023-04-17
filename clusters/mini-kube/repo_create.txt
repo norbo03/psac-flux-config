@@ -1,0 +1,2 @@
+flux create source helm cockroach-repository --namespace=flux-cockroach --interval=15m --url=https://charts.cockroachdb.com/ --export > ./cockroach-repository2.yaml
+

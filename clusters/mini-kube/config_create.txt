@@ -1,0 +1,2 @@
+flux create helmrelease my-cockroach-release --namespace=flux-cockroach --target-namespace=flux-cockroach --interval=5m --source=HelmRepository/cockroach-repository --chart=cockroachdb --chart-version=">10.0.0" --export > ./cockroach2.yaml
+
