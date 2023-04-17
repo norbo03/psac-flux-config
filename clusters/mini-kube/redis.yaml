@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: my-redis-release
+  namespace: flux-redis
+spec:
+  chart:
+    spec:
+      chart: redis
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: redis-repository
+  interval: 5m0s
+  targetNamespace: flux-redis
