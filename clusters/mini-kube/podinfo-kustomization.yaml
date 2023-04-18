@@ -12,3 +12,6 @@ spec:
     kind: GitRepository
     name: podinfo
   targetNamespace: default
+  values:
+    ui:
+      color: green
