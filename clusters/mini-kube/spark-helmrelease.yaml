@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: my-spark-release
+  namespace: flux-spark
+spec:
+  chart:
+    spec:
+      chart: spark
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: spark-repository
+      version: '>6.4.0'
+  interval: 1m0s
+  releaseName: my-spark-release
