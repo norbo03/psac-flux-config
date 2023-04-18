@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: my-mongodb-release
+  namespace: flux-mongodb
+spec:
+  chart:
+    spec:
+      chart: mongodb
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: mongodb-repository
+      version: '>13.9.2'
+  interval: 1m0s
+  releaseName: my-mongodb-release
