@@ -5,7 +5,7 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 1m
   path: ./kustomize
   prune: true
   sourceRef:
@@ -14,4 +14,4 @@ spec:
   targetNamespace: default
   values:
     ui:
-      color: green
+      color: red
